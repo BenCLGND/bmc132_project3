@@ -14,7 +14,7 @@
         <!--Item-->
         <scene sceneID="m2b-l8-CTR">
             <objects>
-                <viewController id="1NL-ZY-OEt" customClass="ViewController" customModule="bmc132_project3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1NL-ZY-OEt" customClass="FirstViewController" customModule="bmc132_project3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Qy-1Q-tEB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
