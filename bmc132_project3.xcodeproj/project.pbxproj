@@ -12,11 +12,12 @@
 		EC6A7FDD20728ACA00D7F252 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7FDC20728ACA00D7F252 /* SecondViewController.swift */; };
 		EC6A7FE020728ACA00D7F252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6A7FDE20728ACA00D7F252 /* Main.storyboard */; };
 		EC6A7FE220728ACA00D7F252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6A7FE120728ACA00D7F252 /* Assets.xcassets */; };
-		EC6A7FE520728ACA00D7F252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6A7FE320728ACA00D7F252 /* LaunchScreen.storyboard */; };
 		EC6A7FF020728ACA00D7F252 /* bmc132_project3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7FEF20728ACA00D7F252 /* bmc132_project3Tests.swift */; };
 		EC6A7FFB20728ACA00D7F252 /* bmc132_project3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7FFA20728ACA00D7F252 /* bmc132_project3UITests.swift */; };
 		EC6A800B20728B2900D7F252 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6A800A20728B2900D7F252 /* CloudKit.framework */; };
 		EC6A800D20728B3200D7F252 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6A800C20728B3200D7F252 /* HealthKit.framework */; };
+		EC6A801320728CA400D7F252 /* userInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC6A800F20728CA300D7F252 /* userInfo.plist */; };
+		EC6A801420728CA400D7F252 /* game controller.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC6A801020728CA400D7F252 /* game controller.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 		EC6A7FDC20728ACA00D7F252 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EC6A7FDF20728ACA00D7F252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC6A7FE120728ACA00D7F252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EC6A7FE420728ACA00D7F252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC6A7FE620728ACA00D7F252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC6A7FEB20728ACA00D7F252 /* bmc132_project3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bmc132_project3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6A7FEF20728ACA00D7F252 /* bmc132_project3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmc132_project3Tests.swift; sourceTree = "<group>"; };
@@ -54,6 +54,8 @@
 		EC6A800820728B2200D7F252 /* bmc132_project3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bmc132_project3.entitlements; sourceTree = "<group>"; };
 		EC6A800A20728B2900D7F252 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EC6A800C20728B3200D7F252 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		EC6A800F20728CA300D7F252 /* userInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = userInfo.plist; sourceTree = "<group>"; };
+		EC6A801020728CA400D7F252 /* game controller.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "game controller.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +109,14 @@
 		EC6A7FD720728ACA00D7F252 /* bmc132_project3 */ = {
 			isa = PBXGroup;
 			children = (
+				EC6A801020728CA400D7F252 /* game controller.jpg */,
+				EC6A800F20728CA300D7F252 /* userInfo.plist */,
 				EC6A800820728B2200D7F252 /* bmc132_project3.entitlements */,
 				EC6A7FD820728ACA00D7F252 /* AppDelegate.swift */,
 				EC6A7FDA20728ACA00D7F252 /* FirstViewController.swift */,
 				EC6A7FDC20728ACA00D7F252 /* SecondViewController.swift */,
 				EC6A7FDE20728ACA00D7F252 /* Main.storyboard */,
 				EC6A7FE120728ACA00D7F252 /* Assets.xcassets */,
-				EC6A7FE320728ACA00D7F252 /* LaunchScreen.storyboard */,
 				EC6A7FE620728ACA00D7F252 /* Info.plist */,
 			);
 			path = bmc132_project3;
@@ -264,9 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC6A7FE520728ACA00D7F252 /* LaunchScreen.storyboard in Resources */,
 				EC6A7FE220728ACA00D7F252 /* Assets.xcassets in Resources */,
 				EC6A7FE020728ACA00D7F252 /* Main.storyboard in Resources */,
+				EC6A801320728CA400D7F252 /* userInfo.plist in Resources */,
+				EC6A801420728CA400D7F252 /* game controller.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,14 +339,6 @@
 				EC6A7FDF20728ACA00D7F252 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EC6A7FE320728ACA00D7F252 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC6A7FE420728ACA00D7F252 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Name</key>
+	<string>John Smith</string>
+	<key>Age</key>
+	<string>100</string>
+	<key>FavoriteGamingPlatform</key>
+	<string>Playstation</string>
+	<key>FavoriteGameGenre</key>
+	<string>RPG</string>
+	<key>FavoriteGameDeveloper</key>
+	<string>Gust</string>
+</dict>
+</plist>
