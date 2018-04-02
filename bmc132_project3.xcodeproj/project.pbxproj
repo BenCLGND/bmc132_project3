@@ -109,15 +109,15 @@
 		EC6A7FD720728ACA00D7F252 /* bmc132_project3 */ = {
 			isa = PBXGroup;
 			children = (
-				EC6A801020728CA400D7F252 /* game controller.jpg */,
-				EC6A800F20728CA300D7F252 /* userInfo.plist */,
+				EC6A7FE120728ACA00D7F252 /* Assets.xcassets */,
 				EC6A800820728B2200D7F252 /* bmc132_project3.entitlements */,
 				EC6A7FD820728ACA00D7F252 /* AppDelegate.swift */,
 				EC6A7FDA20728ACA00D7F252 /* FirstViewController.swift */,
 				EC6A7FDC20728ACA00D7F252 /* SecondViewController.swift */,
 				EC6A7FDE20728ACA00D7F252 /* Main.storyboard */,
-				EC6A7FE120728ACA00D7F252 /* Assets.xcassets */,
 				EC6A7FE620728ACA00D7F252 /* Info.plist */,
+				EC6A800F20728CA300D7F252 /* userInfo.plist */,
+				EC6A801020728CA400D7F252 /* game controller.jpg */,
 			);
 			path = bmc132_project3;
 			sourceTree = "<group>";
