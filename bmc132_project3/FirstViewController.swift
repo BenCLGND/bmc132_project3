@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import CloudKit
+import HealthKit
+
 //Struct to hold data for plist writing/reading
 struct appInfo : Codable {
     
