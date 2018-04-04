@@ -43,6 +43,7 @@ extension UIColor {
 class SecondViewController: UIViewController {
 
     
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet var pictureChange: UISwipeGestureRecognizer!
     @IBOutlet var colorChange: UITapGestureRecognizer!
     

@@ -257,6 +257,7 @@
                     <connections>
                         <outlet property="colorChange" destination="peo-3C-fRr" id="TQI-M2-tGt"/>
                         <outlet property="pictureChange" destination="JyI-mT-fla" id="oeb-JA-s22"/>
+                        <outlet property="resetButton" destination="7NE-fM-Ykp" id="hI9-DV-C8N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
