@@ -13,31 +13,28 @@ import HealthKit
 extension UIColor {
     struct FlatColor {
         struct Green {
-            
+            static let LightGreen = UIColor(netHex: 0x80B880)
+            static let Aqua = UIColor(netHex: 0x66cdaa)
         }
         
         struct Blue {
-            
+            static let NavyBlue = UIColor(netHex: 0x000080)
+            static let PaleBlue = UIColor(netHex: 0xb0c4de)
         }
         
         struct Violet {
-            static let lavender = UIColor(netHex: 0xE6E6FA)
-        }
-        
-        struct Yellow {
-            
-        }
-        
-        struct Orange {
-            
+            static let Lavender = UIColor(netHex: 0xE6E6FA)
+            static let DarkPurple = UIColor(netHex: 0x590059)
         }
         
         struct Red {
-            
+            static let CoralPink = UIColor(netHex: 0xFFAAB9)
+            static let LightPink = UIColor(netHex: 0xFFB6C1)
         }
         
         struct Gray {
-            
+            static let MistGray = UIColor(netHex: 0xd8d8d8)
+            static let LilacGray = UIColor(netHex: 0x9E9CA9)
         }
     }
 }
@@ -61,14 +58,23 @@ class SecondViewController: UIViewController {
     @IBOutlet var pictureChange: UISwipeGestureRecognizer!
     @IBOutlet var colorChange: UITapGestureRecognizer!
     
+    //Colors for background
+    let lavender = UIColor.FlatColor.Violet.Lavender
+    let lightGreen = UIColor.FlatColor.Green.LightGreen
+    let aqua = UIColor.FlatColor.Green.Aqua
+    let navyBlue = UIColor.FlatColor.Blue.NavyBlue
+    let paleBlue = UIColor.FlatColor.Blue.PaleBlue
+    let darkPurple = UIColor.FlatColor.Violet.DarkPurple
+    let coralPink = UIColor.FlatColor.Red.CoralPink
+    let lightPink = UIColor.FlatColor.Red.LightPink
+    let mistGray = UIColor.FlatColor.Gray.MistGray
+    let lilacGray = UIColor.FlatColor.Gray.LilacGray
     
-    let lavender = UIColor.FlatColor.Violet.lavender
-    //let blueGray = UIColor(red: 104.0/255, green: 118.0/255, blue: 129.0/255, alpha: 1)
-    
+    let colors = [.lavender, .lightGreen, .aqua, .navyBlue, .paleBlue, .darkPurple, .coralPink, .lightPink, .mistGray, .lilacGray]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
 
