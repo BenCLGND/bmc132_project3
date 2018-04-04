@@ -12,30 +12,18 @@ import HealthKit
 
 extension UIColor {
     struct FlatColor {
-        struct Green {
+   
             static let LightGreen = UIColor(netHex: 0x80B880)
             static let Aqua = UIColor(netHex: 0x66cdaa)
-        }
-        
-        struct Blue {
-            static let NavyBlue = UIColor(netHex: 0x000080)
+            static let RoyalBlue = UIColor(netHex: 0x4169E1)
             static let PaleBlue = UIColor(netHex: 0xb0c4de)
-        }
-        
-        struct Violet {
             static let Lavender = UIColor(netHex: 0xE6E6FA)
-            static let DarkPurple = UIColor(netHex: 0x590059)
-        }
-        
-        struct Red {
+            static let MediumPurple = UIColor(netHex: 0x9370DB)
             static let CoralPink = UIColor(netHex: 0xFFAAB9)
             static let LightPink = UIColor(netHex: 0xFFB6C1)
-        }
-        
-        struct Gray {
             static let MistGray = UIColor(netHex: 0xd8d8d8)
             static let LilacGray = UIColor(netHex: 0x9E9CA9)
-        }
+
     }
 }
 
@@ -58,6 +46,7 @@ class SecondViewController: UIViewController {
     @IBOutlet var pictureChange: UISwipeGestureRecognizer!
     @IBOutlet var colorChange: UITapGestureRecognizer!
     
+    /*
     //Colors for background
     let lavender = UIColor.FlatColor.Violet.Lavender
     let lightGreen = UIColor.FlatColor.Green.LightGreen
@@ -71,7 +60,7 @@ class SecondViewController: UIViewController {
     let lilacGray = UIColor.FlatColor.Gray.LilacGray
     
     let colors = [.lavender, .lightGreen, .aqua, .navyBlue, .paleBlue, .darkPurple, .coralPink, .lightPink, .mistGray, .lilacGray]
-    
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         
