@@ -54,12 +54,14 @@ class SecondViewController: UIViewController {
     }
     
     var count = 0;
-    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:count:colors:)))
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:colors:)))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addGestureRecognizer(tapGesture)
         self.view.isUserInteractionEnabled = true
+        tapGesture.numberOfTouchesRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
         
         //colors
         let lightGreen = UIColor.FlatColor.LightGreen
@@ -75,22 +77,22 @@ class SecondViewController: UIViewController {
         
         let colors:[UIColor] = [lightGreen, aqua, royalBlue, paleBlue, lavender, mediumPurple, coralPink, lightPink, mistGray, lilacGray]
         
-        handleTap(sender: tapGesture, count: count, colors: colors)
+        handleTap(sender: tapGesture, colors: colors)
         
-        self.view.backgroundColor = UIColor.FlatColor.Aqua
+        //self.view.backgroundColor = UIColor.FlatColor.RoyalBlue
     }
 
-    @objc func handleTap(sender: UITapGestureRecognizer, count: Int, colors: [UIColor]) {
-        if sender.state == .ended {
+    @objc func handleTap(sender: UITapGestureRecognizer, colors: [UIColor]) {
+
             if count > 9 {
                 resetButton(self)
             }
+        
             print(#function, "\(count)")
             self.view.backgroundColor = colors[count]
-            
+            count += 1
             
         }
-    }
 
 }
 
