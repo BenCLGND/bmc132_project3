@@ -54,10 +54,11 @@ class SecondViewController: UIViewController {
     }
     
     var count = 0;
-    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:colors:)))
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:colors:)))
         self.view.addGestureRecognizer(tapGesture)
         self.view.isUserInteractionEnabled = true
         tapGesture.numberOfTouchesRequired = 1
@@ -85,7 +86,7 @@ class SecondViewController: UIViewController {
     @objc func handleTap(sender: UITapGestureRecognizer, colors: [UIColor]) {
 
             if count > 9 {
-                resetButton(self)
+                count = 0
             }
         
             print(#function, "\(count)")
