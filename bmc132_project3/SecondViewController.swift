@@ -40,34 +40,57 @@ extension UIColor {
     }
 }
 
+
+
+
 class SecondViewController: UIViewController {
 
     
-    @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet var pictureChange: UISwipeGestureRecognizer!
-    @IBOutlet var colorChange: UITapGestureRecognizer!
     
-    /*
-    //Colors for background
-    let lavender = UIColor.FlatColor.Violet.Lavender
-    let lightGreen = UIColor.FlatColor.Green.LightGreen
-    let aqua = UIColor.FlatColor.Green.Aqua
-    let navyBlue = UIColor.FlatColor.Blue.NavyBlue
-    let paleBlue = UIColor.FlatColor.Blue.PaleBlue
-    let darkPurple = UIColor.FlatColor.Violet.DarkPurple
-    let coralPink = UIColor.FlatColor.Red.CoralPink
-    let lightPink = UIColor.FlatColor.Red.LightPink
-    let mistGray = UIColor.FlatColor.Gray.MistGray
-    let lilacGray = UIColor.FlatColor.Gray.LilacGray
+    @IBAction func resetButton(_ sender: Any) {
+        count = 0;
+        self.view.backgroundColor = UIColor.white
+        print(#function, "\(count)")
+    }
     
-    let colors = [.lavender, .lightGreen, .aqua, .navyBlue, .paleBlue, .darkPurple, .coralPink, .lightPink, .mistGray, .lilacGray]
-    */
+    var count = 0;
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:count:colors:)))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addGestureRecognizer(tapGesture)
+        self.view.isUserInteractionEnabled = true
         
+        //colors
+        let lightGreen = UIColor.FlatColor.LightGreen
+        let aqua = UIColor.FlatColor.Aqua
+        let royalBlue = UIColor.FlatColor.RoyalBlue
+        let paleBlue = UIColor.FlatColor.PaleBlue
+        let lavender = UIColor.FlatColor.Lavender
+        let mediumPurple = UIColor.FlatColor.MediumPurple
+        let coralPink = UIColor.FlatColor.CoralPink
+        let lightPink = UIColor.FlatColor.LightPink
+        let mistGray = UIColor.FlatColor.MistGray
+        let lilacGray = UIColor.FlatColor.LilacGray
+        
+        let colors:[UIColor] = [lightGreen, aqua, royalBlue, paleBlue, lavender, mediumPurple, coralPink, lightPink, mistGray, lilacGray]
+        
+        handleTap(sender: tapGesture, count: count, colors: colors)
+        
+        self.view.backgroundColor = UIColor.FlatColor.Aqua
     }
 
-
+    @objc func handleTap(sender: UITapGestureRecognizer, count: Int, colors: [UIColor]) {
+        if sender.state == .ended {
+            if count > 9 {
+                resetButton(self)
+            }
+            print(#function, "\(count)")
+            self.view.backgroundColor = colors[count]
+            
+            
+        }
+    }
 
 }
 

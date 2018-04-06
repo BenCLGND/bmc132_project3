@@ -201,12 +201,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NE-fM-Ykp">
-                                <rect key="frame" x="138" y="544" width="98" height="30"/>
-                                <state key="normal" title="Tap to Reset">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose the image or color " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm2-0s-Rgi">
                                 <rect key="frame" x="54" y="14" width="267" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -228,41 +222,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLB-cE-x13">
+                                <rect key="frame" x="124" y="551" width="126" height="30"/>
+                                <state key="normal" title="Push to Reset">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="8rJ-Kc-sve" eventType="touchDown" id="Jfj-8K-0yu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="3oT-e0-8tu" firstAttribute="top" secondItem="RDP-aN-zuo" secondAttribute="bottom" constant="8" symbolic="YES" id="Ahz-km-kmO"/>
                             <constraint firstItem="Jm2-0s-Rgi" firstAttribute="centerX" secondItem="RDP-aN-zuo" secondAttribute="centerX" id="Bml-sp-y4b"/>
-                            <constraint firstItem="7NE-fM-Ykp" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="138" id="UFV-jt-bGm"/>
+                            <constraint firstItem="OLB-cE-x13" firstAttribute="centerX" secondItem="7sH-YR-hor" secondAttribute="centerX" id="C3g-Mh-Nlo"/>
                             <constraint firstItem="3oT-e0-8tu" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Ub4-NX-BY3"/>
                             <constraint firstItem="7sH-YR-hor" firstAttribute="top" secondItem="3oT-e0-8tu" secondAttribute="bottom" constant="2" id="W6a-y7-j7j"/>
                             <constraint firstItem="3oT-e0-8tu" firstAttribute="top" secondItem="Jm2-0s-Rgi" secondAttribute="bottom" constant="16" id="YXV-52-OFk"/>
-                            <constraint firstItem="7sH-YR-hor" firstAttribute="centerX" secondItem="7NE-fM-Ykp" secondAttribute="centerX" id="cn8-Bd-xQ9"/>
                             <constraint firstItem="Jm2-0s-Rgi" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="54" id="dlN-bO-0gk"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="OLB-cE-x13" secondAttribute="bottom" constant="37" id="edu-GQ-Mlu"/>
                             <constraint firstItem="I6M-56-FAQ" firstAttribute="centerX" secondItem="7sH-YR-hor" secondAttribute="centerX" id="jBW-Fk-zSl"/>
                             <constraint firstItem="3oT-e0-8tu" firstAttribute="centerX" secondItem="I6M-56-FAQ" secondAttribute="centerX" id="nB8-UJ-LGl"/>
                             <constraint firstItem="RDP-aN-zuo" firstAttribute="centerX" secondItem="3oT-e0-8tu" secondAttribute="centerX" id="pVQ-6K-2Qc"/>
                             <constraint firstItem="7sH-YR-hor" firstAttribute="firstBaseline" secondItem="I6M-56-FAQ" secondAttribute="firstBaseline" id="qVf-yU-nvC"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="7NE-fM-Ykp" secondAttribute="bottom" constant="44" id="tWZ-Wy-0Nc"/>
                             <constraint firstItem="Jm2-0s-Rgi" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" constant="-6" id="uS9-cm-mdf"/>
                             <constraint firstItem="RDP-aN-zuo" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="29" id="xMw-Rv-cgr"/>
+                            <constraint firstItem="OLB-cE-x13" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="124" id="zhZ-7K-q4Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="peo-3C-fRr" appends="YES" id="arm-7o-BS1"/>
-                            <outletCollection property="gestureRecognizers" destination="JyI-mT-fla" appends="YES" id="pur-O5-o6p"/>
+                            <outletCollection property="gestureRecognizers" destination="x2U-4X-p5O" appends="YES" id="ueW-Ps-KJ6"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
-                    <connections>
-                        <outlet property="colorChange" destination="peo-3C-fRr" id="TQI-M2-tGt"/>
-                        <outlet property="pictureChange" destination="JyI-mT-fla" id="oeb-JA-s22"/>
-                        <outlet property="resetButton" destination="7NE-fM-Ykp" id="hI9-DV-C8N"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="peo-3C-fRr"/>
-                <swipeGestureRecognizer direction="right" id="JyI-mT-fla"/>
+                <tapGestureRecognizer id="x2U-4X-p5O"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>

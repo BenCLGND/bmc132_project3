@@ -56,6 +56,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
             self.gameDeveloperField.text = self.userInput.FavoriteGameDeveloper
         }
         
+        /*
         //MARK: Begin Reading and decoding plist
         guard let userInputURL = Bundle.main.url(forResource: "userInfo", withExtension: "plist") else {
             print("Error: Path cannot be formed")
@@ -86,6 +87,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         }
         
         self.userInput = localUserInputData
+        */
         
         //MARK: Moving Keyboard for text fields
         NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil) {
