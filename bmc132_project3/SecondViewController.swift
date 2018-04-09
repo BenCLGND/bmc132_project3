@@ -46,6 +46,64 @@ extension UIColor {
 class SecondViewController: UIViewController {
 
     
+    @IBAction func beginTest(_ sender: Any) {
+
+        // TODO: Make into property
+        let healthStore = HKHealthStore()
+        
+        // find out if HealthKit is on this device
+        guard HKHealthStore.isHealthDataAvailable() else {
+            print("No HealthKit on this device")
+            return
+        }
+        
+        // create a quantity type for storing heart rate
+        guard let quantityType = HKObjectType.quantityType(forIdentifier:
+            .heartRate) else {
+                print("Unable to create quantity type")
+                return
+        }
+        
+        // request authorization for saving heart rate and save a sample
+        healthStore.requestAuthorization(toShare: [quantityType], read: []) {
+            okay, error in
+            
+            // error in requesting authorization
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            // requested authorization and was denied
+            if !okay {
+                print("Not authorized to save heart rate HealtKit data")
+                return
+            }
+            
+            // create heart rate sample
+            guard let heartRateType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
+                print("Error: Unable to create heart rate type")
+                return
+            }
+            let heartRateQuantity = HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: Double(arc4random_uniform(80) + 80))
+            let heartSample = HKQuantitySample(type: heartRateType, quantity: heartRateQuantity, start: Date(), end: Date())
+            
+            // save the heart rate sample
+            healthStore.save(heartSample) {
+                success, error in
+                
+                if let error = error {
+                    print("Error saving heart sample: \(error.localizedDescription)")
+                    return
+                }
+                
+                // NOTE: Closure "captured" the local variable heartRateQuantity
+                // NOTE: even though it may have run after the variable is out-of-scope
+                print("Heart rate ", heartRateQuantity, " saved:", success)
+            }
+        }
+        
+    }
     
     @IBAction func resetButton(_ sender: Any) {
         count = 0;
@@ -54,7 +112,18 @@ class SecondViewController: UIViewController {
     }
     
     var count = 0;
-
+    //colors
+    let lightGreen = UIColor.FlatColor.LightGreen
+    let aqua = UIColor.FlatColor.Aqua
+    let royalBlue = UIColor.FlatColor.RoyalBlue
+    let paleBlue = UIColor.FlatColor.PaleBlue
+    let lavender = UIColor.FlatColor.Lavender
+    let mediumPurple = UIColor.FlatColor.MediumPurple
+    let coralPink = UIColor.FlatColor.CoralPink
+    let lightPink = UIColor.FlatColor.LightPink
+    let mistGray = UIColor.FlatColor.MistGray
+    let lilacGray = UIColor.FlatColor.LilacGray
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,36 +133,34 @@ class SecondViewController: UIViewController {
         tapGesture.numberOfTouchesRequired = 1
         tapGesture.numberOfTouchesRequired = 1
         
-        //colors
-        let lightGreen = UIColor.FlatColor.LightGreen
-        let aqua = UIColor.FlatColor.Aqua
-        let royalBlue = UIColor.FlatColor.RoyalBlue
-        let paleBlue = UIColor.FlatColor.PaleBlue
-        let lavender = UIColor.FlatColor.Lavender
-        let mediumPurple = UIColor.FlatColor.MediumPurple
-        let coralPink = UIColor.FlatColor.CoralPink
-        let lightPink = UIColor.FlatColor.LightPink
-        let mistGray = UIColor.FlatColor.MistGray
-        let lilacGray = UIColor.FlatColor.LilacGray
-        
         let colors:[UIColor] = [lightGreen, aqua, royalBlue, paleBlue, lavender, mediumPurple, coralPink, lightPink, mistGray, lilacGray]
-        
+
         handleTap(sender: tapGesture, colors: colors)
+
+        
+
         
         //self.view.backgroundColor = UIColor.FlatColor.RoyalBlue
     }
 
     @objc func handleTap(sender: UITapGestureRecognizer, colors: [UIColor]) {
-
-            if count > 9 {
-                count = 0
-            }
         
-            print(#function, "\(count)")
+        if colors.isEmpty {
+            print("Error:")
+            return
+        }
+        
+        print(#function, "\(count)")
+        if count > 9 {
+            count = 0
+        }
+        else {
             self.view.backgroundColor = colors[count]
-            count += 1
+        }
+        
+        count += 1
             
         }
-
+    
 }
 

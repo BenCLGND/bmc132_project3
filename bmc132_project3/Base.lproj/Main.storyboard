@@ -13,7 +13,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Game Info-->
         <scene sceneID="m2b-l8-CTR">
             <objects>
                 <viewController id="1NL-ZY-OEt" customClass="FirstViewController" customModule="bmc132_project3" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,7 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fne-AT-3UV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="GEc-RW-vL8"/>
+                    <tabBarItem key="tabBarItem" title="Game Info" id="GEc-RW-vL8"/>
                     <connections>
                         <outlet property="ageField" destination="BJL-vv-aT9" id="IMP-aC-YCN"/>
                         <outlet property="gameDeveloperField" destination="N4i-uM-Yz4" id="V5D-mz-gGk"/>
@@ -181,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="727" y="-328"/>
         </scene>
-        <!--Second-->
+        <!--Health Tests-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="bmc132_project3" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,17 +231,33 @@
                                     <action selector="resetButton:" destination="8rJ-Kc-sve" eventType="touchDown" id="Jfj-8K-0yu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H6-Be-Kmp">
+                                <rect key="frame" x="59" y="286" width="257" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="0LX-Zz-iSz"/>
+                                </constraints>
+                                <state key="normal" title="Push to Begin Writing Heart Rate">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="beginTest:" destination="8rJ-Kc-sve" eventType="touchDown" id="0h5-in-4t2"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="3oT-e0-8tu" firstAttribute="top" secondItem="RDP-aN-zuo" secondAttribute="bottom" constant="8" symbolic="YES" id="Ahz-km-kmO"/>
                             <constraint firstItem="Jm2-0s-Rgi" firstAttribute="centerX" secondItem="RDP-aN-zuo" secondAttribute="centerX" id="Bml-sp-y4b"/>
                             <constraint firstItem="OLB-cE-x13" firstAttribute="centerX" secondItem="7sH-YR-hor" secondAttribute="centerX" id="C3g-Mh-Nlo"/>
+                            <constraint firstItem="0H6-Be-Kmp" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="Ez2-Io-Yq0"/>
+                            <constraint firstItem="0H6-Be-Kmp" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="59" id="J9F-yg-tOl"/>
                             <constraint firstItem="3oT-e0-8tu" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Ub4-NX-BY3"/>
                             <constraint firstItem="7sH-YR-hor" firstAttribute="top" secondItem="3oT-e0-8tu" secondAttribute="bottom" constant="2" id="W6a-y7-j7j"/>
                             <constraint firstItem="3oT-e0-8tu" firstAttribute="top" secondItem="Jm2-0s-Rgi" secondAttribute="bottom" constant="16" id="YXV-52-OFk"/>
                             <constraint firstItem="Jm2-0s-Rgi" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="54" id="dlN-bO-0gk"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="OLB-cE-x13" secondAttribute="bottom" constant="37" id="edu-GQ-Mlu"/>
+                            <constraint firstItem="0H6-Be-Kmp" firstAttribute="centerX" secondItem="7sH-YR-hor" secondAttribute="centerX" id="fWy-Lu-c3A"/>
                             <constraint firstItem="I6M-56-FAQ" firstAttribute="centerX" secondItem="7sH-YR-hor" secondAttribute="centerX" id="jBW-Fk-zSl"/>
                             <constraint firstItem="3oT-e0-8tu" firstAttribute="centerX" secondItem="I6M-56-FAQ" secondAttribute="centerX" id="nB8-UJ-LGl"/>
                             <constraint firstItem="RDP-aN-zuo" firstAttribute="centerX" secondItem="3oT-e0-8tu" secondAttribute="centerX" id="pVQ-6K-2Qc"/>
@@ -255,7 +271,7 @@
                             <outletCollection property="gestureRecognizers" destination="x2U-4X-p5O" appends="YES" id="ueW-Ps-KJ6"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Health Tests" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="x2U-4X-p5O"/>
