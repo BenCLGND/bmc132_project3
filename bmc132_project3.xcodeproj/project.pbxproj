@@ -18,6 +18,7 @@
 		EC6A800D20728B3200D7F252 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6A800C20728B3200D7F252 /* HealthKit.framework */; };
 		EC6A801320728CA400D7F252 /* userInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC6A800F20728CA300D7F252 /* userInfo.plist */; };
 		EC6A801420728CA400D7F252 /* game controller.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC6A801020728CA400D7F252 /* game controller.jpg */; };
+		ECF5022C207BCEA40050C58C /* UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF5022B207BCEA40050C58C /* UIGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		EC6A800C20728B3200D7F252 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		EC6A800F20728CA300D7F252 /* userInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = userInfo.plist; sourceTree = "<group>"; };
 		EC6A801020728CA400D7F252 /* game controller.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "game controller.jpg"; sourceTree = "<group>"; };
+		ECF5022B207BCEA40050C58C /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				EC6A7FE620728ACA00D7F252 /* Info.plist */,
 				EC6A800F20728CA300D7F252 /* userInfo.plist */,
 				EC6A801020728CA400D7F252 /* game controller.jpg */,
+				ECF5022B207BCEA40050C58C /* UIGestureRecognizer.swift */,
 			);
 			path = bmc132_project3;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6A7FDD20728ACA00D7F252 /* SecondViewController.swift in Sources */,
+				ECF5022C207BCEA40050C58C /* UIGestureRecognizer.swift in Sources */,
 				EC6A7FD920728ACA00D7F252 /* AppDelegate.swift in Sources */,
 				EC6A7FDB20728ACA00D7F252 /* FirstViewController.swift in Sources */,
 			);
