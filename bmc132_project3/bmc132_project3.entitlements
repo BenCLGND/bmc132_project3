@@ -8,7 +8,7 @@
 	<true/>
 	<key>com.apple.developer.icloud-container-identifiers</key>
 	<array>
-		<string>iCloud.$(CFBundleIdentifier)</string>
+		<string>iCloud.edu.uakron.cs.ios.bmc132</string>
 	</array>
 	<key>com.apple.developer.icloud-services</key>
 	<array>

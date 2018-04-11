@@ -8,7 +8,6 @@
 
 import UIKit
 import CloudKit
-import HealthKit
 
 //Struct to hold data for plist writing/reading
 struct appInfo : Codable {
@@ -27,8 +26,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     var userInput = appInfo()
     var activeField: UITextField!
     
+    let publicInformationDatabase = CKContainer.default().publicCloudDatabase
+    
     //Var to write plist in bundle
-    lazy var plistURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("userInfo").appendingPathExtension("plist")
+    //lazy var plistURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("userInfo").appendingPathExtension("plist")
     
     //MARK: Text Field References
     @IBOutlet weak var nameField: UITextField!
@@ -37,6 +38,38 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var gameGenreField: UITextField!
     @IBOutlet weak var gameDeveloperField: UITextField!
     
+
+    //Submit Button to allow record creation and save
+    @IBAction func submitButton(_ sender: Any) {
+        let infoRecord = CKRecord(recordType: "Information")
+        infoRecord["Name"] = (self.userInput.Name! as CKRecordValue)
+        infoRecord["Age"] = self.userInput.Age! as CKRecordValue
+        infoRecord["FavoriteGamePlatform"] = self.userInput.FavoriteGamingPlatform! as CKRecordValue
+        infoRecord["FavoriteGameGenre"] = self.userInput.FavoriteGameGenre! as CKRecordValue
+        infoRecord["FavoriteGameDeveloper"] = self.userInput.FavoriteGameDeveloper! as CKRecordValue
+        
+        
+        // save the record in a public database
+        self.publicInformationDatabase.save(infoRecord) {
+            record, error in
+            
+            // NOTE: Should check error, might have a workaround
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let savedRecord = record else {
+                print("Error: Unable to save record")
+                return
+            }
+            
+            print(savedRecord)
+        }
+        
+
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +79,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         self.gamePlatformField.delegate = self
         self.gameGenreField.delegate = self
         self.gameDeveloperField.delegate = self
+        
         
         //MARK: Filling in text fields from plist in bundle
         defer {
@@ -74,19 +108,6 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         }
         
         self.userInput = userInput
-        
-        //MARK: Begin reading/decoding of user plist
-        guard let localData = try? Data(contentsOf: userInputURL) else {
-            print("Error: Data not found")
-            return
-        }
-        
-        guard let localUserInputData = try? PropertyListDecoder().decode(appInfo.self, from: localData) else {
-            print("Data couldn't be retrieved from plist")
-            return
-        }
-        
-        self.userInput = localUserInputData
         
         
         //MARK: Moving Keyboard for text fields
@@ -126,35 +147,21 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: Misc Functions for textfields
-    //Encodes data to plist while resigning the active textField
+    //Puts data into struct to allow a record to be created
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
         
-        //Encode to plist
-        DispatchQueue.main.async {
-            if let currentName = self.nameField.text, let currentAge = self.ageField.text, let currentFavePlatform = self.gamePlatformField.text, let currentFaveGenre = self.gameGenreField.text, let currentGameDeveloper = self.gameDeveloperField.text {
+        if let currentName = self.nameField.text, let currentAge = self.ageField.text, let currentFavePlatform = self.gamePlatformField.text, let currentFaveGenre = self.gameGenreField.text, let currentGameDeveloper = self.gameDeveloperField.text {
                 
-                //Variables to set to plist
-                self.userInput.Name = currentName
-                self.userInput.Age = currentAge
-                self.userInput.FavoriteGamingPlatform = currentFavePlatform
-                self.userInput.FavoriteGameGenre = currentFaveGenre
-                self.userInput.FavoriteGameDeveloper = currentGameDeveloper
-                
-                let encoder = PropertyListEncoder()
-                
-                encoder.outputFormat = .xml
-                do {
-                    try encoder.encode(self.userInput).write(to: self.plistURL)
-                } catch {
-                    print(error)
-                }
-                
-                print("User data file: \(self.plistURL)")
-            }
+            //Variables to set to plist
+            self.userInput.Name = currentName
+            self.userInput.Age = currentAge
+            self.userInput.FavoriteGamingPlatform = currentFavePlatform
+            self.userInput.FavoriteGameGenre = currentFaveGenre
+            self.userInput.FavoriteGameDeveloper = currentGameDeveloper
+
         }
-        
         return true
     }
     

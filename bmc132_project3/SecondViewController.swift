@@ -71,11 +71,17 @@ class SecondViewController: UIViewController {
                 print("Error: Unable to create heart rate type")
                 return
             }
-            let heartRateQuantity = HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: Double(arc4random_uniform(80) + 80))
-            let heartSample = HKQuantitySample(type: heartRateType, quantity: heartRateQuantity, start: Date(), end: Date())
+
+            var heartRateSamples: [HKQuantitySample] = []
+            for _ in 1...6 {
+                let heartRateQuantity = HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: Double(arc4random_uniform(80) + 60))
+                sleep(1)
+                let heartSample = HKQuantitySample(type: heartRateType, quantity: heartRateQuantity, start: Date(), end: Date())
+                heartRateSamples.append(heartSample)
+            }
             
             // save the heart rate sample
-            healthStore.save(heartSample) {
+            healthStore.save(heartRateSamples) {
                 success, error in
                 
                 if let error = error {
@@ -85,7 +91,7 @@ class SecondViewController: UIViewController {
                 
                 // NOTE: Closure "captured" the local variable heartRateQuantity
                 // NOTE: even though it may have run after the variable is out-of-scope
-                print("Heart rate ", heartRateQuantity, " saved:", success)
+                //print("Heart rate ", heartRateQuantity, " saved:", success)
             }
         }
         
@@ -149,6 +155,8 @@ class SecondViewController: UIViewController {
         //self.imageChange.image = UIImage(contentsOfFile: rainPath)
         
         let colors:[UIColor] = [lightGreen, aqua, royalBlue, paleBlue, lavender, mediumPurple, coralPink, lightPink, mistGray, lilacGray]
+        
+        
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(){
             if self.colorCount > 9 {
