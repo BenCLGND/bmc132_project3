@@ -30,6 +30,8 @@ extension UIColor {
 class SecondViewController: UIViewController {
 
     
+    @IBOutlet weak var imageChange: UIImageView!
+    
     @IBAction func beginTest(_ sender: Any) {
 
         // TODO: Make into property
@@ -90,12 +92,14 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func resetButton(_ sender: Any) {
-        count = 0;
+        colorCount = 0;
+        imageCount = 0;
         self.view.backgroundColor = UIColor.white
-        print(#function, "\(count)")
+        
     }
+    var imageCount = 0
+    var colorCount = 0;
     
-    var count = 0;
     //colors
     let lightGreen = UIColor.FlatColor.LightGreen
     let aqua = UIColor.FlatColor.Aqua
@@ -109,21 +113,63 @@ class SecondViewController: UIViewController {
     let lilacGray = UIColor.FlatColor.LilacGray
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Images
+        guard let rainPath = Bundle.main.path(forResource: "Rain", ofType: "jpeg") else {
+            print("Error")
+            return
+        }
+        
+        guard let flowerPath = Bundle.main.path(forResource: "Flower", ofType: "jpeg") else {
+            print("Error")
+            return
+        }
+
+        guard let mountainsPath = Bundle.main.path(forResource: "Mountains", ofType: "jpg") else {
+            print("Error")
+            return
+        }
+
+        guard let waterfallPath = Bundle.main.path(forResource: "Waterfall", ofType: "jpeg") else {
+            print("Error")
+            return
+        }
+
+        guard let sunsetPath = Bundle.main.path(forResource: "Sunset", ofType: "jpg") else {
+            print("Error")
+            return
+        }
+        
+        guard let images:[UIImage] = [UIImage(contentsOfFile: rainPath)!, UIImage(contentsOfFile: flowerPath)!, UIImage(contentsOfFile: mountainsPath)!, UIImage(contentsOfFile: waterfallPath)!, UIImage(contentsOfFile: sunsetPath)!] else {
+            return
+        }
+        //self.imageChange.image = UIImage(contentsOfFile: rainPath)
+        
         let colors:[UIColor] = [lightGreen, aqua, royalBlue, paleBlue, lavender, mediumPurple, coralPink, lightPink, mistGray, lilacGray]
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(){
-            if self.count > 9 {
-                self.count = 0
+            if self.colorCount > 9 {
+                self.colorCount = 0
             }
             else {
-                self.view.backgroundColor = colors[self.count]
+                self.view.backgroundColor = colors[self.colorCount]
+                self.colorCount += 1
             }
-            
-            self.count += 1
             })
         
+        self.view.addGestureRecognizer(UISwipeGestureRecognizer(){
+            if self.imageCount > 4 {
+                self.imageCount = 0
+            }
+            else{
+                self.imageChange.image = images[self.imageCount]
+                self.imageCount += 1
+            }
+
+        })
     }
 
     

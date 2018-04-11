@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC2A2BCF207E695A00B3C69B /* Sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC2A2BCA207E695A00B3C69B /* Sunset.jpg */; };
+		EC2A2BD0207E695A00B3C69B /* Rain.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EC2A2BCB207E695A00B3C69B /* Rain.jpeg */; };
+		EC2A2BD1207E695A00B3C69B /* Waterfall.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EC2A2BCC207E695A00B3C69B /* Waterfall.jpeg */; };
+		EC2A2BD2207E695A00B3C69B /* Flower.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EC2A2BCD207E695A00B3C69B /* Flower.jpeg */; };
+		EC2A2BD3207E695A00B3C69B /* Mountains.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC2A2BCE207E695A00B3C69B /* Mountains.jpg */; };
 		EC6A7FD920728ACA00D7F252 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7FD820728ACA00D7F252 /* AppDelegate.swift */; };
 		EC6A7FDB20728ACA00D7F252 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7FDA20728ACA00D7F252 /* FirstViewController.swift */; };
 		EC6A7FDD20728ACA00D7F252 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7FDC20728ACA00D7F252 /* SecondViewController.swift */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC2A2BCA207E695A00B3C69B /* Sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sunset.jpg; sourceTree = "<group>"; };
+		EC2A2BCB207E695A00B3C69B /* Rain.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rain.jpeg; sourceTree = "<group>"; };
+		EC2A2BCC207E695A00B3C69B /* Waterfall.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Waterfall.jpeg; sourceTree = "<group>"; };
+		EC2A2BCD207E695A00B3C69B /* Flower.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Flower.jpeg; sourceTree = "<group>"; };
+		EC2A2BCE207E695A00B3C69B /* Mountains.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mountains.jpg; sourceTree = "<group>"; };
 		EC6A7FD520728ACA00D7F252 /* bmc132_project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bmc132_project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6A7FD820728ACA00D7F252 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6A7FDA20728ACA00D7F252 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +123,11 @@
 		EC6A7FD720728ACA00D7F252 /* bmc132_project3 */ = {
 			isa = PBXGroup;
 			children = (
+				EC2A2BCD207E695A00B3C69B /* Flower.jpeg */,
+				EC2A2BCE207E695A00B3C69B /* Mountains.jpg */,
+				EC2A2BCB207E695A00B3C69B /* Rain.jpeg */,
+				EC2A2BCC207E695A00B3C69B /* Waterfall.jpeg */,
+				EC2A2BCA207E695A00B3C69B /* Sunset.jpg */,
 				EC6A7FE120728ACA00D7F252 /* Assets.xcassets */,
 				EC6A800820728B2200D7F252 /* bmc132_project3.entitlements */,
 				EC6A7FD820728ACA00D7F252 /* AppDelegate.swift */,
@@ -273,10 +288,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2A2BCF207E695A00B3C69B /* Sunset.jpg in Resources */,
 				EC6A7FE220728ACA00D7F252 /* Assets.xcassets in Resources */,
 				EC6A7FE020728ACA00D7F252 /* Main.storyboard in Resources */,
+				EC2A2BD3207E695A00B3C69B /* Mountains.jpg in Resources */,
 				EC6A801320728CA400D7F252 /* userInfo.plist in Resources */,
 				EC6A801420728CA400D7F252 /* game controller.jpg in Resources */,
+				EC2A2BD1207E695A00B3C69B /* Waterfall.jpeg in Resources */,
+				EC2A2BD2207E695A00B3C69B /* Flower.jpeg in Resources */,
+				EC2A2BD0207E695A00B3C69B /* Rain.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
