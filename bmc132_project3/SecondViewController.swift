@@ -152,8 +152,7 @@ class SecondViewController: UIViewController {
         guard let images:[UIImage] = [UIImage(contentsOfFile: rainPath)!, UIImage(contentsOfFile: flowerPath)!, UIImage(contentsOfFile: mountainsPath)!, UIImage(contentsOfFile: waterfallPath)!, UIImage(contentsOfFile: sunsetPath)!] else {
             return
         }
-        //self.imageChange.image = UIImage(contentsOfFile: rainPath)
-        
+
         let colors:[UIColor] = [lightGreen, aqua, royalBlue, paleBlue, lavender, mediumPurple, coralPink, lightPink, mistGray, lilacGray]
         
         
