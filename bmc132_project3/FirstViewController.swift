@@ -26,10 +26,9 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     var userInput = appInfo()
     var activeField: UITextField!
     
+    //database
     let publicInformationDatabase = CKContainer.default().publicCloudDatabase
     
-    //Var to write plist in bundle
-    //lazy var plistURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("userInfo").appendingPathExtension("plist")
     
     //MARK: Text Field References
     @IBOutlet weak var nameField: UITextField!
@@ -41,6 +40,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
 
     //Submit Button to allow record creation and save
     @IBAction func submitButton(_ sender: Any) {
+        
+        //Create Record
         let infoRecord = CKRecord(recordType: "Information")
         infoRecord["Name"] = (self.userInput.Name! as CKRecordValue)
         infoRecord["Age"] = self.userInput.Age! as CKRecordValue
@@ -53,21 +54,20 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         self.publicInformationDatabase.save(infoRecord) {
             record, error in
             
-            // NOTE: Should check error, might have a workaround
             if let error = error {
                 print(error)
                 return
             }
             
             guard let savedRecord = record else {
-                print("Error: Unable to save record")
+                print("Error: SAVE FAILURE")
                 return
             }
             
             print(savedRecord)
         }
         
-
+        databaseQuery()
         
     }
     override func viewDidLoad() {
@@ -108,7 +108,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         }
         
         self.userInput = userInput
-        
+
         
         //MARK: Moving Keyboard for text fields
         NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil) {
@@ -119,7 +119,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             
-            //Handle cases as to avoid certain fields from being pushed offscreen during landscape view
+            //Handle cases as to avoid certain fields from being pushed offscreen
             if self.activeField == self.nameField {
                 return
             }
@@ -146,6 +146,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
     //MARK: Misc Functions for textfields
     //Puts data into struct to allow a record to be created
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -154,7 +155,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         
         if let currentName = self.nameField.text, let currentAge = self.ageField.text, let currentFavePlatform = self.gamePlatformField.text, let currentFaveGenre = self.gameGenreField.text, let currentGameDeveloper = self.gameDeveloperField.text {
                 
-            //Variables to set to plist
+            //Variables to set to record
             self.userInput.Name = currentName
             self.userInput.Age = currentAge
             self.userInput.FavoriteGamingPlatform = currentFavePlatform
@@ -168,6 +169,44 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     //Allows textFields to be marked as active to make handling easier
     func textFieldDidBeginEditing(_ textField: UITextField) {
         activeField = textField
+    }
+    
+    //Allows records to be pulled
+    func databaseQuery() {
+        
+        // setup query
+        let predicate = NSPredicate(value: true)
+        let sort = NSSortDescriptor(key: "Name", ascending: false)
+        let query = CKQuery(recordType: "Information", predicate: predicate)
+        query.sortDescriptors = [sort]
+        
+        // create the initial query operation
+        let queryOperation = CKQueryOperation(query: query)
+        queryOperation.database = publicInformationDatabase
+        queryOperation.recordFetchedBlock = {
+            record in
+            
+            // Process each record
+            print(record)
+        }
+        queryOperation.queryCompletionBlock = {
+            cursor, error in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            // NOTE: If the cursor is not nil, then more records are available
+            guard let queryCursor = cursor else {
+                print("No cursor")
+                return
+            }
+            
+            print(queryCursor)
+        }
+        
+        publicInformationDatabase.add(queryOperation)
     }
 }
 
