@@ -28,31 +28,34 @@ extension UIColor {
 }
 
 class SecondViewController: UIViewController {
+    
+    //MARK: Colors
+    let lightGreen = UIColor.FlatColor.LightGreen
+    let aqua = UIColor.FlatColor.Aqua
+    let royalBlue = UIColor.FlatColor.RoyalBlue
+    let paleBlue = UIColor.FlatColor.PaleBlue
+    let lavender = UIColor.FlatColor.Lavender
+    let mediumPurple = UIColor.FlatColor.MediumPurple
+    let coralPink = UIColor.FlatColor.CoralPink
+    let lightPink = UIColor.FlatColor.LightPink
+    let mistGray = UIColor.FlatColor.MistGray
+    let lilacGray = UIColor.FlatColor.LilacGray
+    
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.enableAllOrientation = false
-        
-        let value = UIInterfaceOrientation.portrait.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
-        
-
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.enableAllOrientation = true
-    }
-    
-    
+    //MARK: Outlets
+    //ImageView
     @IBOutlet weak var imageChange: UIImageView!
     
+    //Button Action
+    @IBAction func resetButton(_ sender: Any) {
+        
+        self.view.backgroundColor = UIColor.white
+    }
+    
+    //Button Action
     @IBAction func beginTest(_ sender: Any) {
 
-        // TODO: Make into property
+
         let healthStore = HKHealthStore()
         
         // find out if HealthKit is on this device
@@ -106,42 +109,45 @@ class SecondViewController: UIViewController {
                     print("Error saving heart sample: \(error.localizedDescription)")
                     return
                 }
-                
-                // NOTE: Closure "captured" the local variable heartRateQuantity
-                // NOTE: even though it may have run after the variable is out-of-scope
-                //print("Heart rate ", heartRateQuantity, " saved:", success)
             }
         }
         
     }
     
-    @IBAction func resetButton(_ sender: Any) {
-        colorCount = 0;
-        imageCount = 0;
-        self.view.backgroundColor = UIColor.white
+    //MARK: Functions to lock second view into portrait
+    //Locks Orientation for view
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.enableAllOrientation = false
+        
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+        
         
     }
-    var imageCount = 0
-    var colorCount = 0;
     
-    //colors
-    let lightGreen = UIColor.FlatColor.LightGreen
-    let aqua = UIColor.FlatColor.Aqua
-    let royalBlue = UIColor.FlatColor.RoyalBlue
-    let paleBlue = UIColor.FlatColor.PaleBlue
-    let lavender = UIColor.FlatColor.Lavender
-    let mediumPurple = UIColor.FlatColor.MediumPurple
-    let coralPink = UIColor.FlatColor.CoralPink
-    let lightPink = UIColor.FlatColor.LightPink
-    let mistGray = UIColor.FlatColor.MistGray
-    let lilacGray = UIColor.FlatColor.LilacGray
+    //Resets orientation for other view
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.enableAllOrientation = true
+    }
     
     
-    
+    //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Images
+        // Update value when changed in CloudKit key store
+        NotificationCenter.default.addObserver(forName: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: nil, queue: nil) {
+            notification in
+            
+            print("Notification: \(notification.description)")
+        }
+        //MARK: Variables
+        //MARK: Images
         guard let rainPath = Bundle.main.path(forResource: "Rain", ofType: "jpeg") else {
             print("Error")
             return
@@ -170,31 +176,47 @@ class SecondViewController: UIViewController {
         guard let images:[UIImage] = [UIImage(contentsOfFile: rainPath)!, UIImage(contentsOfFile: flowerPath)!, UIImage(contentsOfFile: mountainsPath)!, UIImage(contentsOfFile: waterfallPath)!, UIImage(contentsOfFile: sunsetPath)!] else {
             return
         }
-
+        
+        //MARK: Color Array
         let colors:[UIColor] = [lightGreen, aqua, royalBlue, paleBlue, lavender, mediumPurple, coralPink, lightPink, mistGray, lilacGray]
         
+        //MARK: Keystore
+        let keyStore = NSUbiquitousKeyValueStore()
         
+        // read current count (default is 0 if it does not exist)
+        var colorCount = keyStore.longLong(forKey: "colorCount")
+        var imageCount = keyStore.longLong(forKey: "imageCount")
         
+        //MARK: Tap Gesture
         self.view.addGestureRecognizer(UITapGestureRecognizer(){
-            if self.colorCount > 9 {
-                self.colorCount = 0
+            if colorCount > 9 {
+                colorCount = 0
             }
             else {
-                self.view.backgroundColor = colors[self.colorCount]
-                self.colorCount += 1
+                self.view.backgroundColor = colors[Int(colorCount)]
+                colorCount += 1
+                keyStore.set(colorCount, forKey: "colorCount")
+                keyStore.synchronize()
+                print("Color Count:", colorCount)
             }
             })
         
+        //MARK: Swipe Gesture
         self.view.addGestureRecognizer(UISwipeGestureRecognizer(){
-            if self.imageCount > 4 {
-                self.imageCount = 0
+            if imageCount > 4 {
+                imageCount = 0
             }
             else{
-                self.imageChange.image = images[self.imageCount]
-                self.imageCount += 1
+                self.imageChange.image = images[Int(imageCount)]
+                imageCount += 1
+                keyStore.set(imageCount, forKey: "imageCount")
+                keyStore.synchronize()
+                print("Image Count:", imageCount)
             }
 
         })
+ 
+        
     }
 
     

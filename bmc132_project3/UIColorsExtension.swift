@@ -2,8 +2,6 @@
 //  UIColorsExtension.swift
 //  bmc132_project3
 //
-//  Created by Clark,Benjamin on 4/9/18.
-//  Copyright © 2018 Clark,Benjamin. All rights reserved.
 //
 // Used with permission from b-r-o's Github
 // Link: https://gist.github.com/b-r-o/2297d397a7020a38d6192d4290cc0470

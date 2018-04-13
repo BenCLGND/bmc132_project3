@@ -9,7 +9,7 @@
 import UIKit
 import CloudKit
 
-//Struct to hold data for plist writing/reading
+//Struct to hold data for iCloud writing/reading
 struct appInfo : Codable {
     
     var Name: String?
@@ -37,7 +37,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var gameGenreField: UITextField!
     @IBOutlet weak var gameDeveloperField: UITextField!
     
-
+    //MARK: iCloud Submit Button
     //Submit Button to allow record creation and save
     @IBAction func submitButton(_ sender: Any) {
         
@@ -70,6 +70,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         databaseQuery()
         
     }
+    
+    //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         

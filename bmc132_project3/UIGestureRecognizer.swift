@@ -2,8 +2,7 @@
 //  UIGestureRecognizer.swift
 //  bmc132_project3
 //
-//  Created by Clark,Benjamin on 4/9/18.
-//  Copyright © 2018 Clark,Benjamin. All rights reserved.
+//
 //
 
 import Foundation
@@ -41,7 +40,6 @@ private class Target {
     }
     
     // function that gesture calls, which then calls closure
-    // NOTE: @IBAction is needed when invokd() is used in the #selector
     @IBAction func invoke() {
         trailingClosure()
     }
