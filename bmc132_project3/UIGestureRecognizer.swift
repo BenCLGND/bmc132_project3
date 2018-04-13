@@ -2,7 +2,7 @@
 //  UIGestureRecognizer.swift
 //  bmc132_project3
 //
-//
+// Code by Michael Collard
 //
 
 import Foundation
@@ -12,7 +12,6 @@ extension UIGestureRecognizer {
     
     convenience init(trailingClosure closure: @escaping (() -> ())) {
         
-        // let UIGestureRecognizer do its thing
         self.init()
         
         // create a new target
