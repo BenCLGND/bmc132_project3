@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,31 +19,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ouf-D5-Tbc">
-                                <rect key="frame" x="178" y="20" width="97" height="30"/>
+                                <rect key="frame" x="178" y="21" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqM-8o-53U">
-                                <rect key="frame" x="178" y="58" width="97" height="30"/>
+                                <rect key="frame" x="178" y="56" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXZ-xZ-MW6">
-                                <rect key="frame" x="178" y="100" width="97" height="30"/>
+                                <rect key="frame" x="178" y="96" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="974-FO-xDi">
-                                <rect key="frame" x="178" y="138" width="97" height="30"/>
+                                <rect key="frame" x="178" y="134" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIC-c0-1Zo">
-                                <rect key="frame" x="178" y="180" width="97" height="30"/>
+                                <rect key="frame" x="178" y="175" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -58,26 +58,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dby-6Q-vIg">
-                                <rect key="frame" x="23" y="61" width="74" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fav Game Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTW-G9-6ET">
-                                <rect key="frame" x="23" y="139" width="134" height="28"/>
+                                <rect key="frame" x="23" y="61" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fav Game Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOM-dP-NoC">
-                                <rect key="frame" x="23" y="180" width="147" height="29"/>
+                                <rect key="frame" x="23" y="175" width="147" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fav Gaming Platform" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbI-7r-Gpu">
-                                <rect key="frame" x="23" y="104" width="159" height="27"/>
+                                <rect key="frame" x="23" y="96" width="168" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fav Game Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTW-G9-6ET">
+                                <rect key="frame" x="23" y="136" width="134" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -86,19 +86,19 @@
                             <constraint firstItem="Ouf-D5-Tbc" firstAttribute="trailing" secondItem="yqM-8o-53U" secondAttribute="trailing" id="0Gl-mu-l45"/>
                             <constraint firstItem="dby-6Q-vIg" firstAttribute="leading" secondItem="lbI-7r-Gpu" secondAttribute="leading" id="1HD-H6-yyt"/>
                             <constraint firstItem="dby-6Q-vIg" firstAttribute="top" secondItem="qW9-mj-dle" secondAttribute="bottom" constant="12" id="4S3-DW-rjh"/>
-                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="lbI-7r-Gpu" secondAttribute="trailing" constant="138" id="C4s-sR-RIl"/>
-                            <constraint firstAttribute="bottom" secondItem="KIC-c0-1Zo" secondAttribute="bottom" constant="20" symbolic="YES" id="Dnr-0Z-ZAr"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="lbI-7r-Gpu" secondAttribute="trailing" constant="129" id="C4s-sR-RIl"/>
                             <constraint firstItem="KOM-dP-NoC" firstAttribute="top" secondItem="KIC-c0-1Zo" secondAttribute="top" id="EXm-w1-QDV"/>
                             <constraint firstItem="qW9-mj-dle" firstAttribute="leading" secondItem="dby-6Q-vIg" secondAttribute="leading" id="HM9-IO-s6h"/>
-                            <constraint firstItem="yqM-8o-53U" firstAttribute="top" secondItem="Ouf-D5-Tbc" secondAttribute="bottom" constant="8" symbolic="YES" id="LBi-2U-LD4"/>
-                            <constraint firstItem="rTW-G9-6ET" firstAttribute="centerY" secondItem="974-FO-xDi" secondAttribute="centerY" id="MmG-Vg-NVK"/>
+                            <constraint firstItem="lbI-7r-Gpu" firstAttribute="top" secondItem="IXZ-xZ-MW6" secondAttribute="top" id="IOc-8a-hDx"/>
+                            <constraint firstItem="yqM-8o-53U" firstAttribute="top" secondItem="Ouf-D5-Tbc" secondAttribute="bottom" constant="5" id="LBi-2U-LD4"/>
+                            <constraint firstItem="KIC-c0-1Zo" firstAttribute="top" secondItem="974-FO-xDi" secondAttribute="bottom" constant="11" id="MhF-nP-4wK"/>
+                            <constraint firstItem="rTW-G9-6ET" firstAttribute="centerY" secondItem="974-FO-xDi" secondAttribute="centerY" constant="1" id="MmG-Vg-NVK"/>
                             <constraint firstItem="yqM-8o-53U" firstAttribute="leading" secondItem="dby-6Q-vIg" secondAttribute="trailing" constant="81" id="SWb-8Q-CYx"/>
                             <constraint firstItem="yqM-8o-53U" firstAttribute="leading" secondItem="IXZ-xZ-MW6" secondAttribute="leading" id="VoK-WE-lMo"/>
-                            <constraint firstItem="Ouf-D5-Tbc" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="20" symbolic="YES" id="YAP-DH-94K"/>
                             <constraint firstItem="974-FO-xDi" firstAttribute="top" secondItem="IXZ-xZ-MW6" secondAttribute="bottom" constant="8" symbolic="YES" id="Yn7-le-bfM"/>
                             <constraint firstItem="qW9-mj-dle" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="23" id="aPm-TY-E7E"/>
                             <constraint firstItem="qW9-mj-dle" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="23" id="e0x-PW-PQn"/>
-                            <constraint firstItem="dby-6Q-vIg" firstAttribute="bottom" secondItem="yqM-8o-53U" secondAttribute="bottom" id="eNk-aE-bPa"/>
+                            <constraint firstItem="dby-6Q-vIg" firstAttribute="bottom" secondItem="yqM-8o-53U" secondAttribute="bottom" constant="-4" id="eNk-aE-bPa"/>
                             <constraint firstItem="KOM-dP-NoC" firstAttribute="centerY" secondItem="KIC-c0-1Zo" secondAttribute="centerY" id="fAb-PV-VUm"/>
                             <constraint firstItem="yqM-8o-53U" firstAttribute="trailing" secondItem="IXZ-xZ-MW6" secondAttribute="trailing" id="fxs-Zw-9qN"/>
                             <constraint firstItem="IXZ-xZ-MW6" firstAttribute="leading" secondItem="974-FO-xDi" secondAttribute="leading" id="gfM-9f-vgx"/>
@@ -106,14 +106,13 @@
                             <constraint firstItem="974-FO-xDi" firstAttribute="leading" secondItem="KIC-c0-1Zo" secondAttribute="leading" id="kQq-NI-5iX"/>
                             <constraint firstItem="lbI-7r-Gpu" firstAttribute="leading" secondItem="rTW-G9-6ET" secondAttribute="leading" id="lRr-Ge-DmX"/>
                             <constraint firstItem="Ouf-D5-Tbc" firstAttribute="leading" secondItem="yqM-8o-53U" secondAttribute="leading" id="lcN-XT-90y"/>
-                            <constraint firstItem="rTW-G9-6ET" firstAttribute="top" secondItem="lbI-7r-Gpu" secondAttribute="bottom" constant="8" symbolic="YES" id="lsb-6J-Lrk"/>
-                            <constraint firstItem="974-FO-xDi" firstAttribute="top" secondItem="lbI-7r-Gpu" secondAttribute="bottom" constant="7" id="mnO-Sc-sRN"/>
+                            <constraint firstItem="rTW-G9-6ET" firstAttribute="top" secondItem="lbI-7r-Gpu" secondAttribute="bottom" constant="12" id="lsb-6J-Lrk"/>
+                            <constraint firstItem="974-FO-xDi" firstAttribute="top" secondItem="lbI-7r-Gpu" secondAttribute="bottom" constant="10" id="mnO-Sc-sRN"/>
                             <constraint firstItem="IXZ-xZ-MW6" firstAttribute="trailing" secondItem="974-FO-xDi" secondAttribute="trailing" id="q98-n2-Zvf"/>
                             <constraint firstItem="rTW-G9-6ET" firstAttribute="leading" secondItem="KOM-dP-NoC" secondAttribute="leading" id="qZY-EQ-rY3"/>
                             <constraint firstItem="974-FO-xDi" firstAttribute="leading" secondItem="rTW-G9-6ET" secondAttribute="trailing" constant="21" id="sv4-tP-HPW"/>
-                            <constraint firstItem="IXZ-xZ-MW6" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="th7-9R-6Qq"/>
                             <constraint firstItem="KIC-c0-1Zo" firstAttribute="leading" secondItem="KOM-dP-NoC" secondAttribute="trailing" constant="8" symbolic="YES" id="vSu-f9-pxC"/>
-                            <constraint firstItem="lbI-7r-Gpu" firstAttribute="top" secondItem="dby-6Q-vIg" secondAttribute="bottom" constant="16" id="vh9-Fn-Oej"/>
+                            <constraint firstItem="lbI-7r-Gpu" firstAttribute="top" secondItem="dby-6Q-vIg" secondAttribute="bottom" constant="14" id="vh9-Fn-Oej"/>
                             <constraint firstItem="Ouf-D5-Tbc" firstAttribute="leading" secondItem="qW9-mj-dle" secondAttribute="trailing" constant="86" id="xp8-cv-OB8"/>
                             <constraint firstItem="974-FO-xDi" firstAttribute="trailing" secondItem="KIC-c0-1Zo" secondAttribute="trailing" id="yUB-2l-hoG"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Ouf-D5-Tbc" secondAttribute="trailing" constant="45" id="z33-zQ-KrB"/>
