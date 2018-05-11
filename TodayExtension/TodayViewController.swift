@@ -11,6 +11,12 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var ageField: UITextField!
+    @IBOutlet weak var favGamingPlatformField: UITextField!
+    @IBOutlet weak var favGameGenreField: UITextField!
+    @IBOutlet weak var favGameDeveloperField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded

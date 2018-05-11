@@ -122,6 +122,13 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="230"/>
+                    <connections>
+                        <outlet property="ageField" destination="yqM-8o-53U" id="cHR-Rd-Zqh"/>
+                        <outlet property="favGameDeveloperField" destination="KIC-c0-1Zo" id="ZeX-7O-90E"/>
+                        <outlet property="favGameGenreField" destination="974-FO-xDi" id="nMZ-cw-cGY"/>
+                        <outlet property="favGamingPlatformField" destination="IXZ-xZ-MW6" id="mjX-S3-n5v"/>
+                        <outlet property="nameField" destination="Ouf-D5-Tbc" id="s9p-G4-0NM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
