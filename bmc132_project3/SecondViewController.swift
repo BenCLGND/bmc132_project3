@@ -41,6 +41,7 @@ class SecondViewController: UIViewController {
     let mistGray = UIColor.FlatColor.MistGray
     let lilacGray = UIColor.FlatColor.LilacGray
     
+    let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132")
 
     //MARK: Outlets
     //ImageView

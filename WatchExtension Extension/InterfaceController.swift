@@ -12,6 +12,12 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var colorChange: WKInterfaceButton!
+    
+    func updateColor() {
+        let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132")
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         

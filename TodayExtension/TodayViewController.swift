@@ -11,25 +11,29 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
-    var activeField: UITextField!
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var ageField: UITextField!
-    @IBOutlet weak var favGamingPlatformField: UITextField!
-    @IBOutlet weak var favGameGenreField: UITextField!
-    @IBOutlet weak var favGameDeveloperField: UITextField!
+    let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132")
+    
+
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var favGamingPlatformLabel: UILabel!
+    @IBOutlet weak var FavoriteGamingGenreLabel: UILabel!
+    @IBOutlet weak var favoriteGameDeveloperLabel: UILabel!
+    
+    //Allow user to open app to edit info
     @IBAction func updateButton(_ sender: Any) {
+        extensionContext?.open(URL(string: "gameExperiment://")!, completionHandler: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
-        self.ageField.delegate = self as? UITextFieldDelegate
         print("Oh my")
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
-        
+        print("Oh my 2")
         
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
@@ -46,13 +50,4 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    //Allows textFields to be marked as active to make handling easier
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        activeField = textField
-    }
 }
