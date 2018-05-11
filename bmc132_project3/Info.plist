@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>To monitor heart rate while playing video games</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Main</string>
 	<key>UIMainStoryboardFile</key>

@@ -28,7 +28,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     
     //database
     let publicInformationDatabase = CKContainer.default().publicCloudDatabase
-    
+    let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132")
     
     //MARK: Text Field References
     @IBOutlet weak var nameField: UITextField!

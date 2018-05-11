@@ -10,7 +10,8 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    
+    var activeField: UITextField!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var ageField: UITextField!
     @IBOutlet weak var favGamingPlatformField: UITextField!
@@ -22,10 +23,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        self.ageField.delegate = self as? UITextFieldDelegate
+        print("Oh my")
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
+        
         
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
@@ -40,5 +44,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         } else if activeDisplayMode == .expanded {
             self.preferredContentSize = CGSize(width: maxSize.width, height: 300)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    //Allows textFields to be marked as active to make handling easier
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeField = textField
     }
 }
