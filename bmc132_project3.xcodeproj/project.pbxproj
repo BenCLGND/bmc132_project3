@@ -170,6 +170,10 @@
 		EC6A801020728CA400D7F252 /* game controller.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "game controller.jpg"; sourceTree = "<group>"; };
 		ECF5022B207BCEA40050C58C /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizer.swift; sourceTree = "<group>"; };
 		ECF5022D207BD00F0050C58C /* UIColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorsExtension.swift; sourceTree = "<group>"; };
+		ECF628BB20A5D58B00682625 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		ECF628BC20A5D58B00682625 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		ECF628BD20A5D58B00682625 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		ECF628BE20A5D58C00682625 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Interface.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -714,6 +718,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EC0668FC2090DF6A00A9B653 /* Base */,
+				ECF628BC20A5D58B00682625 /* ja */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EC06690F2090E09700A9B653 /* Base */,
+				ECF628BD20A5D58B00682625 /* ja */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -730,6 +736,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EC06691D2090E0C200A9B653 /* Base */,
+				ECF628BE20A5D58C00682625 /* ja */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -738,6 +745,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EC6A7FDF20728ACA00D7F252 /* Base */,
+				ECF628BB20A5D58B00682625 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -883,6 +891,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -940,6 +949,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -992,13 +1002,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = bmc132_project3/bmc132_project3.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = bmc132_project3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.bmc132;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8b90cc27-fbac-4943-a2c6-b278e2346444";
+				PROVISIONING_PROFILE = "6ac2e045-9f65-4fda-b3bf-fc08e250a2f4";
 				PROVISIONING_PROFILE_SPECIFIER = bmc132;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1011,14 +1022,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = bmc132_project3/bmc132_project3.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 3FT8PS6NT6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bmc132_project3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.bmc132;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8b90cc27-fbac-4943-a2c6-b278e2346444";
-				PROVISIONING_PROFILE_SPECIFIER = bmc132;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

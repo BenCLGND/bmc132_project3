@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Fav Game Developer"; ObjectID = "KOM-dP-NoC"; */
+"KOM-dP-NoC.text" = "Fav Game Developer";
+
+/* Class = "UILabel"; text = "Age"; ObjectID = "dby-6Q-vIg"; */
+"dby-6Q-vIg.text" = "Age";
+
+/* Class = "UILabel"; text = "Fav Gaming Platform"; ObjectID = "lbI-7r-Gpu"; */
+"lbI-7r-Gpu.text" = "Fav Gaming Platform";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "qW9-mj-dle"; */
+"qW9-mj-dle.text" = "Name";
+
+/* Class = "UILabel"; text = "Fav Game Genre"; ObjectID = "rTW-G9-6ET"; */
+"rTW-G9-6ET.text" = "Fav Game Genre";

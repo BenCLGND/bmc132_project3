@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; normalTitle = "Push to Begin Writing Heart Rate"; ObjectID = "0H6-Be-Kmp"; */
+"0H6-Be-Kmp.normalTitle" = "Push to Begin Writing Heart Rate";
+
+/* Class = "UILabel"; text = "Fav Game Genre:"; ObjectID = "4tV-kq-zNp"; */
+"4tV-kq-zNp.text" = "Fav Game Genre:";
+
+/* Class = "UITabBarItem"; title = "Game Info"; ObjectID = "GEc-RW-vL8"; */
+"GEc-RW-vL8.title" = "Game Info";
+
+/* Class = "UILabel"; text = "Please select the color and/or image that best soothes you. "; ObjectID = "HOI-EE-Mls"; */
+"HOI-EE-Mls.text" = "Please select the color and/or image that best soothes you. ";
+
+/* Class = "UILabel"; text = "Fav Game Developer:"; ObjectID = "K7t-E2-Qc5"; */
+"K7t-E2-Qc5.text" = "Fav Game Developer:";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "NGf-MI-m57"; */
+"NGf-MI-m57.text" = "Name:";
+
+/* Class = "UIButton"; normalTitle = "Push to Reset"; ObjectID = "OLB-cE-x13"; */
+"OLB-cE-x13.normalTitle" = "Push to Reset";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Tad-23-U9a"; */
+"Tad-23-U9a.normalTitle" = "Submit";
+
+/* Class = "UITabBarItem"; title = "Health Tests"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Health Tests";
+
+/* Class = "UILabel"; text = "Age:"; ObjectID = "ekj-bz-kU4"; */
+"ekj-bz-kU4.text" = "Age:";
+
+/* Class = "UILabel"; text = "Fav Gaming Platform:"; ObjectID = "gXU-wb-U15"; */
+"gXU-wb-U15.text" = "Fav Gaming Platform:";
+
+/* Class = "UILabel"; text = "Tap to change the color or swipe to change the picture."; ObjectID = "lyn-bS-SsG"; */
+"lyn-bS-SsG.text" = "Tap to change the color or swipe to change the picture.";
