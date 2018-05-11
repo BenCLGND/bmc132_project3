@@ -1,36 +1,36 @@
 
 /* Class = "UIButton"; normalTitle = "Push to Begin Writing Heart Rate"; ObjectID = "0H6-Be-Kmp"; */
-"0H6-Be-Kmp.normalTitle" = "Push to Begin Writing Heart Rate";
+"0H6-Be-Kmp.normalTitle" = "心拍数を読むために押す";
 
 /* Class = "UILabel"; text = "Fav Game Genre:"; ObjectID = "4tV-kq-zNp"; */
-"4tV-kq-zNp.text" = "Fav Game Genre:";
+"4tV-kq-zNp.text" = "好きなゲームジャンル:";
 
 /* Class = "UITabBarItem"; title = "Game Info"; ObjectID = "GEc-RW-vL8"; */
-"GEc-RW-vL8.title" = "Game Info";
+"GEc-RW-vL8.title" = "ゲーム情報";
 
 /* Class = "UILabel"; text = "Please select the color and/or image that best soothes you. "; ObjectID = "HOI-EE-Mls"; */
-"HOI-EE-Mls.text" = "Please select the color and/or image that best soothes you. ";
+"HOI-EE-Mls.text" = "あなたに最高の気分を与える色やイメージを選択してください. ";
 
 /* Class = "UILabel"; text = "Fav Game Developer:"; ObjectID = "K7t-E2-Qc5"; */
-"K7t-E2-Qc5.text" = "Fav Game Developer:";
+"K7t-E2-Qc5.text" = "好きなゲーム開発者:";
 
 /* Class = "UILabel"; text = "Name:"; ObjectID = "NGf-MI-m57"; */
-"NGf-MI-m57.text" = "Name:";
+"NGf-MI-m57.text" = "名:";
 
 /* Class = "UIButton"; normalTitle = "Push to Reset"; ObjectID = "OLB-cE-x13"; */
-"OLB-cE-x13.normalTitle" = "Push to Reset";
+"OLB-cE-x13.normalTitle" = "押してリセット";
 
 /* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Tad-23-U9a"; */
-"Tad-23-U9a.normalTitle" = "Submit";
+"Tad-23-U9a.normalTitle" = "提出する";
 
 /* Class = "UITabBarItem"; title = "Health Tests"; ObjectID = "cPa-gy-q4n"; */
-"cPa-gy-q4n.title" = "Health Tests";
+"cPa-gy-q4n.title" = "健康テスト";
 
 /* Class = "UILabel"; text = "Age:"; ObjectID = "ekj-bz-kU4"; */
-"ekj-bz-kU4.text" = "Age:";
+"ekj-bz-kU4.text" = "年齢:";
 
 /* Class = "UILabel"; text = "Fav Gaming Platform:"; ObjectID = "gXU-wb-U15"; */
-"gXU-wb-U15.text" = "Fav Gaming Platform:";
+"gXU-wb-U15.text" = "好きなゲームのプラットフォーム:";
 
 /* Class = "UILabel"; text = "Tap to change the color or swipe to change the picture."; ObjectID = "lyn-bS-SsG"; */
-"lyn-bS-SsG.text" = "Tap to change the color or swipe to change the picture.";
+"lyn-bS-SsG.text" = "タップして色を変更するか、スワイプして画像を変更します";

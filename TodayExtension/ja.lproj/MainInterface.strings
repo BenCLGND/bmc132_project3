@@ -1,15 +1,15 @@
 
 /* Class = "UILabel"; text = "Fav Game Developer"; ObjectID = "KOM-dP-NoC"; */
-"KOM-dP-NoC.text" = "Fav Game Developer";
+"KOM-dP-NoC.text" = "好きなゲーム開発者";
 
 /* Class = "UILabel"; text = "Age"; ObjectID = "dby-6Q-vIg"; */
-"dby-6Q-vIg.text" = "Age";
+"dby-6Q-vIg.text" = "年齢";
 
 /* Class = "UILabel"; text = "Fav Gaming Platform"; ObjectID = "lbI-7r-Gpu"; */
-"lbI-7r-Gpu.text" = "Fav Gaming Platform";
+"lbI-7r-Gpu.text" = "好きなゲームのプラットフォーム";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "qW9-mj-dle"; */
-"qW9-mj-dle.text" = "Name";
+"qW9-mj-dle.text" = "名";
 
 /* Class = "UILabel"; text = "Fav Game Genre"; ObjectID = "rTW-G9-6ET"; */
-"rTW-G9-6ET.text" = "Fav Game Genre";
+"rTW-G9-6ET.text" = "好きなゲームジャンル";
