@@ -16,6 +16,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var favGamingPlatformField: UITextField!
     @IBOutlet weak var favGameGenreField: UITextField!
     @IBOutlet weak var favGameDeveloperField: UITextField!
+    @IBAction func updateButton(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1024,13 +1024,13 @@
 				CODE_SIGN_ENTITLEMENTS = bmc132_project3/bmc132_project3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3FT8PS6NT6;
 				INFOPLIST_FILE = bmc132_project3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.bmc132;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6ac2e045-9f65-4fda-b3bf-fc08e250a2f4";
+				PROVISIONING_PROFILE_SPECIFIER = bmc132;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
