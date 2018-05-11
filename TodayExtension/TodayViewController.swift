@@ -11,7 +11,7 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
-    let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132")
+
     
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -28,13 +28,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
-        print("Oh my")
+        guard let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132") else {
+            print("Error")
+            return
+        }
+
+        self.nameLabel.text = sharedDefaults.string(forKey: "name")
+        self.ageLabel.text = sharedDefaults.string(forKey: "age")
+        self.favGamingPlatformLabel.text = sharedDefaults.string(forKey: "gamePlatform")
+        self.FavoriteGamingGenreLabel.text = sharedDefaults.string(forKey: "gameGenre")
+        self.favoriteGameDeveloperLabel.text = sharedDefaults.string(forKey: "gameDeveloper")
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
-        print("Oh my 2")
-        
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData

@@ -26,9 +26,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     var userInput = appInfo()
     var activeField: UITextField!
     
+    
     //database
     let publicInformationDatabase = CKContainer.default().publicCloudDatabase
-    let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132")
+
     
     //MARK: Text Field References
     @IBOutlet weak var nameField: UITextField!
@@ -40,6 +41,17 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
     //MARK: iCloud Submit Button
     //Submit Button to allow record creation and save
     @IBAction func submitButton(_ sender: Any) {
+        
+        guard let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132") else {
+            print("Error")
+            return
+        }
+
+        //var name = self.userInput.Name
+        //var age = sharedDefaults.string(forKey: "age")
+        //var favGamePlatform = sharedDefaults.string(forKey: "gamePlatform")
+        //var favGameGenre = sharedDefaults.string(forKey: "gameGenre")
+        //var favGameDeveloper = sharedDefaults.string(forKey: "gameDeveloper")
         
         //Create Record
         let infoRecord = CKRecord(recordType: "Information")
@@ -64,16 +76,23 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             
-            print(savedRecord)
+            //print(savedRecord)
         }
         
-        databaseQuery()
+        //databaseQuery()
+        
+        sharedDefaults.set(self.userInput.Name, forKey: "name")
+        sharedDefaults.set(self.userInput.Age, forKey: "age")
+        sharedDefaults.set(self.userInput.FavoriteGamingPlatform, forKey: "gamePlatform")
+        sharedDefaults.set(self.userInput.FavoriteGameGenre, forKey: "gameGenre")
+        sharedDefaults.set(self.userInput.FavoriteGameDeveloper, forKey: "gameDeveloper")
         
     }
     
     //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         //Delegating each textField
         self.nameField.delegate = self
@@ -81,7 +100,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         self.gamePlatformField.delegate = self
         self.gameGenreField.delegate = self
         self.gameDeveloperField.delegate = self
-        
+
         
         //MARK: Filling in text fields from plist in bundle
         defer {
@@ -90,6 +109,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
             self.gamePlatformField.text = self.userInput.FavoriteGamingPlatform
             self.gameGenreField.text = self.userInput.FavoriteGameGenre
             self.gameDeveloperField.text = self.userInput.FavoriteGameDeveloper
+          
         }
         
         
@@ -165,6 +185,16 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
             self.userInput.FavoriteGameDeveloper = currentGameDeveloper
 
         }
+        
+        guard let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132") else {
+            print("Error")
+            return true
+        }
+        sharedDefaults.set(self.userInput.Name, forKey: "name")
+        sharedDefaults.set(self.userInput.Age, forKey: "age")
+        sharedDefaults.set(self.userInput.FavoriteGamingPlatform, forKey: "gamePlatform")
+        sharedDefaults.set(self.userInput.FavoriteGameGenre, forKey: "gameGenre")
+        sharedDefaults.set(self.userInput.FavoriteGameDeveloper, forKey: "gameDeveloper")
         return true
     }
     
