@@ -2,21 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/bmc132/bmc132_project3/bmc132_project3/37759097631_f34c78a799_b.jpg">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/bmc132/bmc132_project3/bmc132_project3/images.jpeg">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/bmc132/bmc132_project3/bmc132_project3/Soothing_Sunset.jpg">
-   </FileRef>
-   <FileRef
-      location = "group:Unknown-1.jpeg">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/bmc132/bmc132_project3/bmc132_project3/Unknown.jpeg">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

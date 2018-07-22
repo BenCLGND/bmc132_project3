@@ -76,7 +76,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
                 return
             }
             
-            //print(savedRecord)
+            print(savedRecord)
         }
         
         //databaseQuery()

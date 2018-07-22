@@ -34,10 +34,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
 
         self.nameLabel.text = sharedDefaults.string(forKey: "name")
+        //self.nameLabel.text = "John Smith"
         self.ageLabel.text = sharedDefaults.string(forKey: "age")
         self.favGamingPlatformLabel.text = sharedDefaults.string(forKey: "gamePlatform")
         self.FavoriteGamingGenreLabel.text = sharedDefaults.string(forKey: "gameGenre")
         self.favoriteGameDeveloperLabel.text = sharedDefaults.string(forKey: "gameDeveloper")
+        
+
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -46,6 +49,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
         
+        print(self.nameLabel.text)
         completionHandler(NCUpdateResult.newData)
     }
     
