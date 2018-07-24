@@ -48,6 +48,22 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
+        guard let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132") else {
+            print("Error")
+            return
+        }
+        
+        self.nameLabel.text = sharedDefaults.string(forKey: "name")
+        self.ageLabel.text = sharedDefaults.string(forKey: "age")
+        self.favGamingPlatformLabel.text = sharedDefaults.string(forKey: "gamePlatform")
+        self.FavoriteGamingGenreLabel.text = sharedDefaults.string(forKey: "gameGenre")
+        self.favoriteGameDeveloperLabel.text = sharedDefaults.string(forKey: "gameDeveloper")
+        //self.favoriteGameDeveloperLabel.text = "Gust"
+        //self.favGamingPlatformLabel.text = "Oh boy"
+        //self.FavoriteGamingGenreLabel.text = "RPG"
+        //self.nameLabel.text = "John Smith"
+        //self.ageLabel.text = "100"
+        
         
         print(self.nameLabel.text)
         completionHandler(NCUpdateResult.newData)
