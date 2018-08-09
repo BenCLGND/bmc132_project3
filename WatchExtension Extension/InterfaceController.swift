@@ -12,16 +12,19 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    //Outlets
     @IBOutlet var dieSelection: WKInterfacePicker!
     @IBOutlet var numberAcquired: WKInterfaceLabel!
     @IBOutlet var rollButton: WKInterfaceButton!
     
+    //Picker Action
     @IBAction func pickerItemChanged(_ value: Int) {
         //print("List Picker: \(dieList[value]) selected")
         index = value
         //print(index)
     }
     
+    //Button Action
     @IBAction func rollDie() {
         //print("Pushed")
         if index == 0 {
@@ -46,8 +49,9 @@ class InterfaceController: WKInterfaceController {
             numberAcquired.setText("Error")
         }
     }
-    var index = 0
     
+    //Variables
+    var index = 0
     var dieList : [String] = [
         "Four-Sided",
         "Six-Sided",
@@ -58,14 +62,13 @@ class InterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-
-        // Configure interface objects here.
     }
     
 
     override func willActivate() {
         super.willActivate()
         
+        //Set Picker
         let pickerItems: [WKPickerItem] = dieList.map {
             let pickerItem = WKPickerItem()
             pickerItem.title = $0
@@ -75,7 +78,6 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
     

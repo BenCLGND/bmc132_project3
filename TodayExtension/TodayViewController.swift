@@ -32,9 +32,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             print("Error")
             return
         }
-
+        
+        //Set Labels
         self.nameLabel.text = sharedDefaults.string(forKey: "name")
-        //self.nameLabel.text = "John Smith"
         self.ageLabel.text = sharedDefaults.string(forKey: "age")
         self.favGamingPlatformLabel.text = sharedDefaults.string(forKey: "gamePlatform")
         self.FavoriteGamingGenreLabel.text = sharedDefaults.string(forKey: "gameGenre")
@@ -44,28 +44,25 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
         guard let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132") else {
             print("Error")
             return
         }
         
+        //Set Labels
         self.nameLabel.text = sharedDefaults.string(forKey: "name")
         self.ageLabel.text = sharedDefaults.string(forKey: "age")
         self.favGamingPlatformLabel.text = sharedDefaults.string(forKey: "gamePlatform")
         self.FavoriteGamingGenreLabel.text = sharedDefaults.string(forKey: "gameGenre")
         self.favoriteGameDeveloperLabel.text = sharedDefaults.string(forKey: "gameDeveloper")
         //self.favoriteGameDeveloperLabel.text = "Gust"
-        //self.favGamingPlatformLabel.text = "Oh boy"
+        //self.favGamingPlatformLabel.text = "Playstation"
         //self.FavoriteGamingGenreLabel.text = "RPG"
         //self.nameLabel.text = "John Smith"
         //self.ageLabel.text = "100"
         
         
-        print(self.nameLabel.text)
+        //print(self.nameLabel.text)
         completionHandler(NCUpdateResult.newData)
     }
     
