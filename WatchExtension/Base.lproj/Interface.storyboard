@@ -24,8 +24,13 @@
                                 <action selector="pickerItemChanged:" destination="AgC-eL-Hgc" id="EzU-cg-hV5"/>
                             </connections>
                         </picker>
-                        <separator alignment="left" id="1Ia-n5-Dmr"/>
+                        <separator alignment="left" id="1Ia-n5-Dmr">
+                            <color key="color" red="0.85178061549999995" green="0.019902142979999999" blue="0.1063584072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
                         <label alignment="left" text="Number : N/A" textAlignment="center" id="c9f-vX-0na"/>
+                        <separator alignment="left" id="7sq-WK-YkM">
+                            <color key="color" red="0.85178061548223349" green="0.019902142975138249" blue="0.1063584071695432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
                         <button width="1" alignment="left" title="Roll Die" id="c8p-T7-7LH">
                             <connections>
                                 <action selector="rollDie" destination="AgC-eL-Hgc" id="OFc-j5-GT9"/>
