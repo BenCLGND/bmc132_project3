@@ -12,26 +12,52 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-    @IBOutlet var colorChange: WKInterfaceButton!
+    @IBOutlet var dieSelection: WKInterfacePicker!
+    @IBOutlet var numberAcquired: WKInterfaceLabel!
+    @IBOutlet var rollButton: WKInterfaceButton!
     
-    func updateColor() {
-        let sharedDefaults = UserDefaults.init(suiteName: "group.edu.uakron.cs.ios.bmc132")
+    @IBAction func pickerItemChanged(_ value: Int) {
+        print("List Picker: \(dieList[value]) selected")
+        index = value
     }
+    
+    @IBAction func rollDie() {
+        print("Pushed")
+        if index == 0 {
+            
+        }
+    }
+    var index = 0
+    
+    var dieList : [String] = [
+        "Four-Sided",
+        "Six-Sided",
+        "Eight-Sided",
+        "Ten-Sided",
+        "Twelve-Sided",
+        "Twenty-Sided"]
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+
         // Configure interface objects here.
     }
     
+
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        let pickerItems: [WKPickerItem] = dieList.map {
+            let pickerItem = WKPickerItem()
+            pickerItem.title = $0
+            return pickerItem
+        }
+        dieSelection.setItems(pickerItems)
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }

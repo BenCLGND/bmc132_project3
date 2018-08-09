@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -16,12 +16,26 @@
                     <items>
                         <group width="1" alignment="left" id="z7c-Ab-akw">
                             <items>
-                                <button width="1" alignment="left" title="Color Change" id="Iy6-Ze-5Np"/>
+                                <label width="131" height="35" alignment="left" text="Pick a die to roll." id="hwB-zK-g4i"/>
                             </items>
                         </group>
+                        <picker width="133" height="33" alignment="left" id="hwZ-xb-6yw">
+                            <connections>
+                                <action selector="pickerItemChanged:" destination="AgC-eL-Hgc" id="EzU-cg-hV5"/>
+                            </connections>
+                        </picker>
+                        <separator alignment="left" id="1Ia-n5-Dmr"/>
+                        <label alignment="left" text="Number : N/A" textAlignment="center" id="c9f-vX-0na"/>
+                        <button width="1" alignment="left" title="Roll Die" id="c8p-T7-7LH">
+                            <connections>
+                                <action selector="rollDie" destination="AgC-eL-Hgc" id="OFc-j5-GT9"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="colorChange" destination="Iy6-Ze-5Np" id="Asa-fp-fZw"/>
+                        <outlet property="dieSelection" destination="hwZ-xb-6yw" id="YuT-PT-9mv"/>
+                        <outlet property="numberAcquired" destination="c9f-vX-0na" id="vEA-2s-bsL"/>
+                        <outlet property="rollButton" destination="c8p-T7-7LH" id="w9j-xn-Iwa"/>
                     </connections>
                 </controller>
             </objects>
