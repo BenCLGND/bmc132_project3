@@ -17,14 +17,33 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var rollButton: WKInterfaceButton!
     
     @IBAction func pickerItemChanged(_ value: Int) {
-        print("List Picker: \(dieList[value]) selected")
+        //print("List Picker: \(dieList[value]) selected")
         index = value
+        //print(index)
     }
     
     @IBAction func rollDie() {
-        print("Pushed")
+        //print("Pushed")
         if index == 0 {
-            
+            numberAcquired.setText(String(Int(arc4random_uniform(4)) + 1))
+        }
+        else if index == 1 {
+            numberAcquired.setText(String(Int(arc4random_uniform(6)) + 1))
+        }
+        else if index == 2 {
+            numberAcquired.setText(String(Int(arc4random_uniform(8)) + 1))
+        }
+        else if index == 3 {
+            numberAcquired.setText(String(Int(arc4random_uniform(10)) + 1))
+        }
+        else if index == 4 {
+            numberAcquired.setText(String(Int(arc4random_uniform(12)) + 1))
+        }
+        else if index == 5 {
+            numberAcquired.setText(String(Int(arc4random_uniform(20)) + 1))
+        }
+        else {
+            numberAcquired.setText("Error")
         }
     }
     var index = 0
