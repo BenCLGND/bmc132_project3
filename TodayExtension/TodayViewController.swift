@@ -55,11 +55,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         self.favGamingPlatformLabel.text = sharedDefaults.string(forKey: "gamePlatform")
         self.FavoriteGamingGenreLabel.text = sharedDefaults.string(forKey: "gameGenre")
         self.favoriteGameDeveloperLabel.text = sharedDefaults.string(forKey: "gameDeveloper")
-        //self.favoriteGameDeveloperLabel.text = "Gust"
-        //self.favGamingPlatformLabel.text = "Playstation"
-        //self.FavoriteGamingGenreLabel.text = "RPG"
-        //self.nameLabel.text = "John Smith"
-        //self.ageLabel.text = "100"
+
         
         
         //print(self.nameLabel.text)
